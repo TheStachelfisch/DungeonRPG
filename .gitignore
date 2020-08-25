@@ -9,8 +9,11 @@
 *.user
 *.userosscache
 *.sln.docstates
+<<<<<<< HEAD
 *.idea
 token.txt
+=======
+>>>>>>> 71a20aca29d8e7af40e59db40ca1c1ae5537162e
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -139,9 +142,12 @@ _TeamCity*
 .axoCover/*
 !.axoCover/settings.json
 
+<<<<<<< HEAD
 # Coverlet is a free, cross platform Code Coverage Tool
 coverage*[.json, .xml, .info]
 
+=======
+>>>>>>> 71a20aca29d8e7af40e59db40ca1c1ae5537162e
 # Visual Studio code coverage results
 *.coverage
 *.coveragexml
@@ -352,4 +358,8 @@ healthchecksdb
 MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
+<<<<<<< HEAD
 .ionide/
+=======
+.ionide/
+>>>>>>> 71a20aca29d8e7af40e59db40ca1c1ae5537162e
