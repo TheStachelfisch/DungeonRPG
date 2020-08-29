@@ -2,8 +2,10 @@
 using System.Reflection;
 using System.Threading.Tasks;
 using Discord;
+using Discord.Addons.Interactive;
 using Discord.Commands;
 using Discord.WebSocket;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace DungeonRPG.Handler
 {
@@ -18,10 +20,14 @@ namespace DungeonRPG.Handler
         {
             _client = client;
             _config = config;
-            
-            _config.DefaultRunMode = RunMode.Async;
-            
+
             _commands = new CommandService(_config);
+            
+            _service = new ServiceCollection()
+                .AddSingleton(client)
+                .AddSingleton<InteractiveService>()
+                .BuildServiceProvider();
+            
             _commands.AddModulesAsync(Assembly.GetEntryAssembly(), _service);
 
             _client.MessageReceived += HandleCommandAsync;
